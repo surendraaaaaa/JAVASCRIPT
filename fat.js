@@ -119,15 +119,57 @@ employeedetails.details()
 
 
 
+function hat(){
+    console.log("surendra");
+    console.log("divya");
+    console.log("sruthi");   
+}
+hat()
+//regular function//
 
 
 
+//function expression//
+let suri=function jet(){
+    console.log("suri");
+    console.log("navya");
+    console.log("gopi"); 
+}
+suri()
+//function with parameters//
+let haty=function(a,b){
+    return a+b;
+} 
+let fat=haty(5,5)
+console.log(fat);
+//function with return type//
 
+function hatty(a,h){
+    console.log(a+h);
+}
+hatty(5,3 )
 
+let newfunc=() =>
+    console.log("rfkrf");
+    console.log("wushwu");
+    console.log('wsk');
+newfunc()
+function greety(name="fish"){
+    console.log(`hello ${name}!`);
+    
+}greety(name="suri")
 
+function wave(a,b){
+    return a+b;
+}
+console.log(wave(4.12,635));
 
-
-
+let frnd=function(price1,price2){
+    return price1+price2
+}
+let price=frnd(100,200)
+let totalprice=price+200
+console.log(totalprice);
 
 
     
