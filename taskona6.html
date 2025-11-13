@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h2>🔍 Find Product Position</h2>
+
+  <h3 id="result"></h3>
+
+  <script>
+    // Step 1: Create an array
+    let items = ["Mouse", "Keyboard", "Mouse", "Monitor"];
+
+    // Step 2: Find first and last occurrence of "Mouse"
+    let firstIndex = items.indexOf("Mouse");      // Finds first "Mouse"
+    let lastIndex = items.lastIndexOf("Mouse");   // Finds last "Mouse"
+
+    // Step 3: Display both index numbers
+    document.getElementById("result").innerHTML =
+      "First Mouse Index → " + firstIndex + "<br>" +
+      "Last Mouse Index → " + lastIndex;
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h2>🔔 Notifications</h2>
+
+  <h3 id="notifyDisplay"></h3>
+  <button onclick="removeOldest()">Remove Oldest</button>
+
+  <script>
+    // Step 1: Create notifications array
+    let notifications = ["Welcome!", "New Offer!", "Your Order is Shipped!"];
+
+    // Step 2: Display all notifications
+    function displayNotifications() {
+      let display = document.getElementById("notifyDisplay");
+
+      if (notifications.length > 0) {
+        display.innerText = "Notifications: " + notifications.join(", ");
+      } else {
+        display.innerText = "No notifications!";
+      }
+    }
+
+    // Step 3 & 4: Remove the first notification using shift()
+    function removeOldest() {
+      if (notifications.length > 0) {
+        notifications.shift(); // removes the first element
+        displayNotifications(); // update display
+      } else {
+        alert("No more notifications to remove!");
+      }
+    }
+
+    // Show initial notifications
+    displayNotifications();
+  </script>
+</body>
+</html>

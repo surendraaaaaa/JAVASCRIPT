@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h2>🛒 Combine Product Categories</h2>
+
+  <h3 id="combinedDisplay"></h3>
+
+  <script>
+    // Step 1: Create two arrays
+    let electronics = ["TV", "Laptop", "Speaker"];
+    let mobiles = ["iPhone", "Samsung", "Pixel"];
+
+    // Step 2: Combine them into a new array using concat()
+    let combinedProducts = electronics.concat(mobiles);
+
+    // Step 3: Display all combined products
+    document.getElementById("combinedDisplay").innerText =
+      "All Products: " + combinedProducts.join(", ");
+  </script>
+</body>
+</html>

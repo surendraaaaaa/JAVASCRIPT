@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h2>🛍️ Shopping Cart</h2>
+
+  <input type="text" id="productName" placeholder="Enter product name">
+  <button onclick="addToCart()">Add to Cart</button>
+  <button onclick="removeLast()">Remove Last</button>
+
+  <h3 id="cartDisplay">Cart: (empty)</h3>
+
+  <script>
+    // Step 1: Create an empty array named cart
+    let cart = [];
+
+    // Add to cart using push()
+    function addToCart() {
+      let product = document.getElementById("productName").value.trim();
+
+      if (product !== "") {
+        cart.push(product); // Add item
+        document.getElementById("productName").value = ""; // Clear input
+        displayCart();
+      } else {
+        alert("Please enter a product name!");
+      }
+    }
+
+    // Step 2 & 3: Remove last item using pop()
+    function removeLast() {
+      if (cart.length > 0) {
+        cart.pop(); // Remove last item
+        displayCart(); // Update display
+      } else {
+        alert("Cart is already empty!");
+      }
+    }
+
+    // Step 4: Display cart items
+    function displayCart() {
+      let cartDisplay = document.getElementById("cartDisplay");
+
+      if (cart.length > 0) {
+        cartDisplay.innerText = "Cart: " + cart.join(", ");
+      } else {
+        cartDisplay.innerText = "Cart: (empty)";
+      }
+    }
+  </script>
+</body>
+</html>

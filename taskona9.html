@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      <h2>📦 Orders List</h2>
+
+  <h3 id="before"></h3>
+  <h3 id="after"></h3>
+
+  <script>
+    // Step 1: Create an array
+    let orders = ["Order1", "Order2", "Order3"];
+
+    // Step 2: Display the original order
+    document.getElementById("before").innerText = "Before: " + orders.join(", ");
+
+    // Step 3: Reverse it using reverse()
+    orders.reverse();
+
+    // Display reversed order
+    document.getElementById("after").innerText = "After: " + orders.join(", ");
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h3>🔍 Search Highlighter</h3>
+  
+  <p id="text">
+    React is a JavaScript library. React makes UI development easier. Learning React is fun!
+  </p>
+
+  <input type="text" id="searchWord" placeholder="Enter word to highlight">
+  <button onclick="highlightText()">Highlight</button>
+
+  <script>
+    function highlightText() {
+      // Step 1: Get paragraph and search word
+      let paragraph = document.getElementById("text").innerHTML;
+      let word = document.getElementById("searchWord").value;
+
+      // Step 2: Check if search word exists
+      if (word && paragraph.includes(word)) {
+        // Step 3: Replace all occurrences with <mark> tags
+        let highlighted = paragraph.replaceAll(word, `<mark>${word}</mark>`);
+        
+        // Step 4: Update paragraph content using DOM manipulation
+        document.getElementById("text").innerHTML = highlighted;
+      } 
+      else {
+        alert("Word not found or empty!");
+      }
+    }
+  </script>
+
+
+</body>
+</html>

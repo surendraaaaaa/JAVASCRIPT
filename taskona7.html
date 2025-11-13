@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h2>💰 Payment Method Check</h2>
+
+  <input type="text" id="paymentInput" placeholder="Enter payment method">
+  <button onclick="checkPayment()">Check Availability</button>
+
+  <h3 id="result"></h3>
+
+  <script>
+    // Step 1: Create an array of payment methods
+    let paymentMethods = ["UPI", "Card", "Cash"];
+
+    // Step 2 & 3: Function to check if method exists using includes()
+    function checkPayment() {
+      let method = document.getElementById("paymentInput").value.trim();
+
+      if (method === "") {
+        alert("Please enter a payment method!");
+        return;
+      }
+
+      // Check if entered method exists
+      if (paymentMethods.includes(method)) {
+        document.getElementById("result").innerText = "✅ Accepted";
+      } else {
+        document.getElementById("result").innerText = "❌ Not Supported";
+      }
+
+      // Clear input
+      document.getElementById("paymentInput").value = "";
+    }
+  </script>
+</body>
+</html>

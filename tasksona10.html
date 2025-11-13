@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     <h2>💵 Sort Products by Price</h2>
+
+  <h3 id="before"></h3>
+  <h3 id="after"></h3>
+
+  <script>
+    // Step 1: Create an array of prices
+    let prices = [45000, 25000, 70000, 32000];
+
+    // Step 2: Display before sorting
+    document.getElementById("before").innerText = "Before: " + prices.join(", ");
+
+    // Step 3: Sort in ascending order using compare function
+    prices.sort(function(a, b) {
+      return a - b;  // Ascending order
+    });
+
+    // Step 4: Display sorted prices
+    document.getElementById("after").innerText = "After: " + prices.join(", ");
+  </script>
+</body>
+</html>
