@@ -173,4 +173,8 @@ console.log(totalprice);
 
 
     
-    
+    (
+        function banner(){
+            console.log("functiontype");
+        }()
+    )
