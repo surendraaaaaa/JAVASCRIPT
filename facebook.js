@@ -18,3 +18,4 @@ divy.innerText+="suri"
 document.write("surendra<br>")
 document.write("<h1>divya</h1>")
 
+//document.getElementById("divy").innerText="susi"//
