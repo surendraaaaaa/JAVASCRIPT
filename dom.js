@@ -26,3 +26,11 @@ newpara.innerText="surendra loves divya"
 jet.replaceWith(newpara)
 
 input.replaceWith("<h1>surendra</h1>")
+
+let kitty=document.getElementById("kitty")
+console.log(kitty.getAttribute("class"));
+kitty.setAttribute("class","rifile")
+console.log(kitty.getAttribute("class"));
+kitty.setAttribute("src","viratkohliadda")
+console.log(kitty.getAttribute("src"));
+
