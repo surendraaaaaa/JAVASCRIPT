@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scroll Position Display</title>
+    <style>
+        body {
+            height: 2000px; /* to allow scrolling */
+            width: 2000px;  /* to allow horizontal scrolling optionally */
+        }
+        #scrollValue {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: lightyellow;
+            padding: 10px;
+            border: 1px solid black;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="scrollValue">Scroll X: 0, Scroll Y: 0</div>
+
+<script>
+    window.addEventListener("scroll", function() {
+        let x = window.scrollX; // horizontal scroll
+        let y = window.scrollY; // vertical scroll
+        document.getElementById("scrollValue").innerHTML = `Scroll X: ${x}, Scroll Y: ${y};`
+    });
+</script>
+
+</body>
+</html>
